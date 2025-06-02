@@ -23,6 +23,25 @@ h1 {
     font-size: 25px;
 }
 
+input {
+    padding: 5px;
+    width: 100px;
+    position: relative;
+    top: 20px;
+    left: 5%;
+    height: 15px;
+    border-radius: 1000px;
+    border: none;
+}
+
+input::before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+}
+
 .link {
     color: black;
     text-decoration: none;
@@ -34,7 +53,7 @@ h1 {
     font-size: 20px;
     position: relative;
     width: max-content;
-    transition: all 500ms;
+    transition: all 1s;
 }
 
 .link::after {
@@ -77,4 +96,14 @@ h1 {
 .link:last-child:hover::before {
     height: 100%;
     border-top-right-radius: 10px;
+}
+
+@media only screen and (max-width: 660px) {
+    nav {
+        padding-left: 5px;
+        display: flex;
+        flex-direction: column;
+        max-width: 122px;
+        height: 1000px;
+    }
 }
